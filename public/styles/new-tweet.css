@@ -1,0 +1,45 @@
+.new-tweet {
+  max-width: 80%;
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.message-box {
+  display: flex;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #272727;
+  outline: none;
+  width: 100%;
+  font-weight: bold;
+  font-size: 16px;
+  text-align: left;
+  padding-left: 5px;
+  padding-right: 10px;
+  /* flex-direction: column; */
+}
+
+.btn {
+  background: #2a90ab;
+  border-color: #2a90ab;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'Bungee', cursive;
+  width: 70px;
+  height: 30px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  box-shadow: 0 0 5px #2a90ab;
+}
+
+.counter {
+  float: right;
+  position: relative;
+  color: #063947;
+  font-weight: bold;
+}
