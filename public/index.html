@@ -24,7 +24,7 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
-      <p><strong>Write</strong> a new tweet</p>
+        <p><strong>Write</strong> a new tweet</p>
     </nav>
 
     <header>
@@ -33,7 +33,7 @@
       </div>
       <br>
       <div class="name-tag">
-          <h2>Porson Lee</h2>
+          <h2><strong>Porson</strong> Lee</h2>
       </div>
   </header >
 
@@ -41,8 +41,8 @@
     <main class="container">
 
     <section class="new-tweet">
-      <form method="POST" action="http://localhost:8080/tweets">
-        <textarea class="message-box" name="message" placeholder="What are you humming about?"></textarea>
+      <form method="POST" action="/tweets/">
+        <textarea class="message-box" name="text" placeholder="What are you humming about?"></textarea>
         <input class="btn" type="submit" value="Tweet">
         <span class="counter">140</span>
       </form>
