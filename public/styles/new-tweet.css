@@ -64,6 +64,10 @@
   background: transparent;
 }
 
+.avatar {
+  width: 50px;
+  height: 50px;
+}
 .tweet {
   border: 2px solid #052C81;
   margin-top: 30px;
