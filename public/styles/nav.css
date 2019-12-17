@@ -29,4 +29,6 @@ nav span {
   cursor:pointer;
   border-color: transparent;
   outline: none;
+  padding: 0;
+  margin: 0;
 }
