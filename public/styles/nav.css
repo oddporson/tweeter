@@ -14,3 +14,19 @@ position: fixed;
 nav span {
   font-family: 'Bungee', cursive;
 }
+
+.chevron {
+  text-align: center;
+}
+
+.chevron p {
+  margin: 0;
+  padding: 0;
+}
+
+.btn-tweet {
+  background-color: transparent;
+  cursor:pointer;
+  border-color: transparent;
+  outline: none;
+}
