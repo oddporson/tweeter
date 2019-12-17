@@ -20,16 +20,16 @@
 }
 
 .btn {
-  background: #2a90ab;
-  border-color: #2a90ab;
+  font-family: 'Bungee', cursive;
+  width: 70px;
+  height: 30px;
+  background: #052C81;
+  border-color: #052C81;
   color: white;
   text-align: center;
   padding: 5px;
   border-radius: 5px;
-  font-family: 'Bungee', cursive;
-  width: 70px;
-  height: 30px;
-  font-size: 15px;
+  font-size: 16px;
   cursor: pointer;
 }
 
@@ -40,6 +40,6 @@
 .counter {
   float: right;
   position: relative;
-  color: #063947;
+  color: #052C81;
   font-weight: bold;
 }
