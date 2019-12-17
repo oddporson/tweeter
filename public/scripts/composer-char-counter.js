@@ -1,6 +1,5 @@
 $(document).ready(function() {
   $(".message-box").keyup(function() {
-    // $(".message-box").on('keyup', function() {
     const maxChar = 140;
     let charCount =  $(this).val().length;
     let remainingChar = maxChar - charCount;
