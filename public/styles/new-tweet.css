@@ -1,3 +1,4 @@
+/* TWEET BOX */
 .new-tweet {
   max-width: 80%;
   margin: 0 auto;
@@ -42,4 +43,91 @@
   position: relative;
   color: #052C81;
   font-weight: bold;
+}
+
+
+
+/* TWEETER POSTS */
+
+#wrapper-tweet {
+  position: relative;
+  display: block;
+  font-weight: normal;
+  justify-content: center;
+  margin: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: transparent;
+}
+
+.tweet {
+  border: 2px solid #052C81;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  transition: box-shadow .8s;
+}
+
+.tweet:hover {
+  box-shadow: 5px 5px 2px 2px #052C81;
+}
+
+h3 {
+  font-weight: normal;
+  display: inline-block;
+  margin: 10px;
+}
+
+.handle {
+  border: none;
+  background: none;
+  float: right;
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+}
+
+.handle:hover {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#wrapper-tweet p {
+  margin: 15px;
+  border-bottom: 2px solid #000000;
+  width: 96%;
+  font-weight: bold;
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-right: 15px;
+  padding-left:15px;
+}
+
+footer {
+  display: block;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0;
+  padding: 5px 14px 8px 14px;
+  width: 100%;
+  align-items: center;
+}
+
+.footer-icons {
+  float: right;
+  padding: 5px;
+}
+
+.fa-flag:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.fa-retweet:hover {
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+  transform: scale(1.5);
 }
