@@ -5,42 +5,42 @@
  */
 
 $(() => { // --> same as $(document).ready(function(){insert here} - provided by Andy Lindsay
-  const tweetData = {
-    "user": {
-      "name": "Newton",
-      "avatars": "https://i.imgur.com/73hZDYK.png",
-      "handle": "@SirIsaac"
-    },
-    "content": {
-      "text": "What a tweeterific app!"
-    },
-    "created_at": 1461116232227
-  };
+  // const tweetData = {
+  //   "user": {
+  //     "name": "Newton",
+  //     "avatars": "https://i.imgur.com/73hZDYK.png",
+  //     "handle": "@SirIsaac"
+  //   },
+  //   "content": {
+  //     "text": "What a tweeterific app!"
+  //   },
+  //   "created_at": 1461116232227
+  // };
 
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
+  // const data = [
+  //   {
+  //     "user": {
+  //       "name": "Newton",
+  //       "avatars": "https://i.imgur.com/73hZDYK.png"
+  //       ,
+  //       "handle": "@SirIsaac"
+  //     },
+  //     "content": {
+  //       "text": "If I have seen further it is by standing on the shoulders of giants"
+  //     },
+  //     "created_at": 1461116232227
+  //   },
+  //   {
+  //     "user": {
+  //       "name": "Descartes",
+  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
+  //       "handle": "@rd" },
+  //     "content": {
+  //       "text": "Je pense , donc je suis"
+  //     },
+  //     "created_at": 1461113959088
+  //   }
+  // ];
 
   // RENDER TWEET
   const renderTweets = function(tweets) {
@@ -66,14 +66,13 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
     return newTweet;
   };
 
-  const $tweet = createTweetElement(tweetData);
-  console.log($tweet); // to see what it looks like
-  $('#wrapper-tweet').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  renderTweets(data);
+  // const $tweet = createTweetElement(tweetData);
+  // console.log($tweet); // to see what it looks like
+  // $('#wrapper-tweet').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
+  // renderTweets(data);
 
 
   // POSTING TWEET
-$(function() {
   const $form = $('#tweet-form');
   $form.on('submit', function (event) {
     // console.log('Button clicked, performing ajax call...');
@@ -101,7 +100,6 @@ $(function() {
         }
       });
     });
-  });
 
 // LOAD TWEET / FETCH TWEET
 const loadTweets = function() {
@@ -110,23 +108,14 @@ const loadTweets = function() {
     type: "GET",
     success: function (data) {
       $("#wrapper-tweet").empty();
-      // console.log(data);
+      console.log(data);
       renderTweets(data);
     }
   });
 };
 loadTweets();
 
-});
-
-
-
-
-// // DOCUMENT READY
-// $(document).ready(function() {
-//   loadTweets();
-
-//   const $form = $('#form');
+// const $form = $('#form');
 //   $form.on('submit', function(event) {
 //     const url = $(this).attr("action");
 //     const type = $(this).attr("method");
@@ -158,3 +147,11 @@ loadTweets();
 //   });
 
 
+
+}); // ends (document).ready
+
+
+
+
+
+  
