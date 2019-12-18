@@ -4,6 +4,13 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+// PREVENT CROSS-SITE SCRIPTING
+const escape =  function(str) {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
 $(() => { // --> same as $(document).ready(function(){insert here} - provided by Andy Lindsay
   // const tweetData = {
   //   "user": {
@@ -53,10 +60,10 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
   const createTweetElement = function(tweet) {
     const newTweet = $(
       `<article class="tweet">
-      <img src="${tweet.user.avatars}">
-      <h3>${tweet.user.name}</h3>
-      <h3 class="handle">${tweet.user.handle}</h3>
-      <p>${tweet.content.text}</p>
+      <img src="${escape(tweet.user.avatars)}">
+      <h3>${escape(tweet.user.name)}</h3>
+      <h3 class="handle">${escape(tweet.user.handle)}</h3>
+      <p>${escape(tweet.content.text)}</p>
         <footer>
         ${moment(tweet.created_at).fromNow()}
           <div class="footer-icons"> <i class="fa fa-flag"></i> <i class="fa fa-retweet"></i> <i class="fa fa-heart"></i> </div>
@@ -146,11 +153,9 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
   });
 
 
-
 }); // ends (document).ready
 
 
 
 
 
-  
