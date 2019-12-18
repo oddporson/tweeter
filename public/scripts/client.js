@@ -76,14 +76,14 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
 $(function() {
   const $form = $('#tweet-form');
   $form.on('submit', function (event) {
-    console.log('Button clicked, performing ajax call...');
+    // console.log('Button clicked, performing ajax call...');
     event.preventDefault();
     $.ajax({
       url:'/tweets/',
       method: 'POST',
       data: $form.serialize(),
       success: function(){
-        console.log("everything went well");
+        // console.log("everything went well");
         const newTweet = createTweetElement(
           {
             "user": {
