@@ -72,79 +72,78 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
   // renderTweets(data);
 
 
-  // POSTING TWEET
-  const $form = $('#tweet-form');
-  $form.on('submit', function (event) {
-    // console.log('Button clicked, performing ajax call...');
-    event.preventDefault();
-    $.ajax({
-      url:'/tweets/',
-      method: 'POST',
-      data: $form.serialize(),
-      success: function(){
-        // console.log("everything went well");
-        const newTweet = createTweetElement(
-          {
-            "user": {
-              "name": "Porson",
-              "avatars": "https://i.imgur.com/73hZDYK.png",
-              "handle": "@oddporson" },
-            "content": {
-              text: $('.message-box').val()
-            },
-            "created_at": 1461116232227 
-          }
-        )
-        $('#wrapper-tweet').prepend(newTweet);
-        $(".message-box").val(""); //get rid of text once submitted
-        }
-      });
-    });
+  // // POSTING TWEET
+  // const $form = $('#tweet-form');
+  // $form.on('submit', function (event) {
+  //   // console.log('Button clicked, performing ajax call...');
+  //   event.preventDefault();
+  //   $.ajax({
+  //     url:'/tweets/',
+  //     method: 'POST',
+  //     data: $form.serialize(),
+  //     success: function(){
+  //       // console.log("everything went well");
+  //       const newTweet = createTweetElement(
+  //         {
+  //           "user": {
+  //             "name": "Porson",
+  //             "avatars": "https://i.imgur.com/73hZDYK.png",
+  //             "handle": "@oddporson" },
+  //           "content": {
+  //             text: $('.message-box').val()
+  //           },
+  //           "created_at": 1461116232227
+  //         }
+  //       )
+  //       $('#wrapper-tweet').prepend(newTweet);
+  //       $(".message-box").val(""); //get rid of text once submitted
+  //       }
+  //     });
+  //   });
 
-// LOAD TWEET / FETCH TWEET
-const loadTweets = function() {
-  return $.ajax({
-    url: '/tweets/',
-    type: "GET",
-    success: function (data) {
-      $("#wrapper-tweet").empty();
-      console.log(data);
-      renderTweets(data);
+  // LOAD TWEET / FETCH TWEET
+  const loadTweets = function() {
+    return $.ajax({
+      url: '/tweets/',
+      type: "GET",
+      success: function(data) {
+        $("#wrapper-tweet").empty();
+        console.log(data);
+        renderTweets(data);
+      }
+    });
+  };
+  loadTweets();
+
+
+
+  // FORM VALIDATION
+  $('.message-box').on('input', function() {
+    const content = $(this).val();
+    if (content.length > 145) {
+      window.alert('Too long. Plz rspct our arbitary limit of 140 chars. #kthnxbye.');
     }
   });
-};
-loadTweets();
 
-// const $form = $('#form');
-//   $form.on('submit', function(event) {
-//     const url = $(this).attr("action");
-//     const type = $(this).attr("method");
-//     event.preventDefault();
-//     const data = $(this).serialize();
-
-//     const msgArea = data.substring(5);
-//     if (msgArea === "" || msgArea === null) {
-//       $("#error1").slideDown(200).delay(2000).fadeOut(400);
-//     }
-//     if (msgArea.length > 140) {
-//       $("#error2").slideDown(200).delay(2000).fadeOut(400)(function() {
-//         return $(this).delay(2000).then(function() {
-//           return $(this).fadeOut(400);
-//         });
-//       });
-//     }
-//     $.ajax({
-//       url: url,
-//       type: type,
-//       data: data
-//     })
-//       .then(function() {
-//         loadTweets();
-//         console.log('Success', data);
-//         $(".comp-container").hide();
-//         $(".msg").val("");
-//       });
-//   });
+  const $emptyForm = $('#tweet-form');
+  $emptyForm.on('submit', function(event) {
+    event.preventDefault();
+    const data = $(this).serialize();
+    const tweetMsgArea = $(this).find('.message-box').val();
+    if (tweetMsgArea === "" || tweetMsgArea === null) {
+      window.alert('Are you okay? Type something, you drunkie');
+    }
+    $.ajax({
+      url: '/tweets',
+      method: 'POST',
+      data
+    })
+      .then(function() {
+        loadTweets();
+        console.log('Success', data);
+        $(".message-box").val("");
+      });
+  });
 
 
 
