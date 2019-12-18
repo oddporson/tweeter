@@ -72,7 +72,7 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
   renderTweets(data);
 
 
-  // LOAD TWEET
+  // POSTING TWEET
 $(function() {
   const $form = $('#tweet-form');
   $form.on('submit', function (event) {
@@ -93,7 +93,7 @@ $(function() {
             "content": {
               text: $('.message-box').val()
             },
-            "created_at": 1576612825
+            "created_at": 1461116232227 
           }
         )
         $('#wrapper-tweet').prepend(newTweet);
