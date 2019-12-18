@@ -102,4 +102,59 @@ $(function() {
       });
     });
   });
+
+// LOAD TWEET / FETCH TWEET
+const loadTweets = function() {
+  return $.ajax({
+    url: '/tweets/',
+    type: "GET",
+    success: function (data) {
+      $("#wrapper-tweet").empty();
+      // console.log(data);
+      renderTweets(data);
+    }
+  });
+};
+loadTweets();
+
 });
+
+
+
+
+// // DOCUMENT READY
+// $(document).ready(function() {
+//   loadTweets();
+
+//   const $form = $('#form');
+//   $form.on('submit', function(event) {
+//     const url = $(this).attr("action");
+//     const type = $(this).attr("method");
+//     event.preventDefault();
+//     const data = $(this).serialize();
+
+//     const msgArea = data.substring(5);
+//     if (msgArea === "" || msgArea === null) {
+//       $("#error1").slideDown(200).delay(2000).fadeOut(400);
+//     }
+//     if (msgArea.length > 140) {
+//       $("#error2").slideDown(200).delay(2000).fadeOut(400)(function() {
+//         return $(this).delay(2000).then(function() {
+//           return $(this).fadeOut(400);
+//         });
+//       });
+//     }
+//     $.ajax({
+//       url: url,
+//       type: type,
+//       data: data
+//     })
+//       .then(function() {
+//         loadTweets();
+//         console.log('Success', data);
+//         $(".comp-container").hide();
+//         $(".msg").val("");
+//       });
+//   });
+
+
