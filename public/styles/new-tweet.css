@@ -141,8 +141,8 @@ footer {
 
 /* error css */
 
-.error1 p,
-.error2 p {
+.error1,
+.error2 {
   border: 2px dashed crimson;
   margin: 5px;
   padding: 1px;
