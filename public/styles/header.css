@@ -7,22 +7,15 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  top: 0;
 }
 
 .profile-icon { 
-  position: relative;
-  display: block;
+  display: flex;
+  flex-direction: column;
   margin: auto;
-  padding-top: 70px;
-  z-index: 0;
-  top: 55px;
+  padding-top: 20px;
   text-align: center;
-}
-
-.name-tag {
-  width: 100%;
-  text-align: center;
-  z-index: 0;
 }
 
 h2 {
