@@ -24,7 +24,7 @@ nav {
     padding: 0;
   }
   
-  .btn-tweet {
+  #btn-tweet {
     background-color: transparent;
     cursor:pointer;
     border-color: transparent;
@@ -34,11 +34,12 @@ nav {
   }
 
 /* Arrow pointing down animation taken from codepen*/
-a { color: white; text-decoration: none; }
+/* a {  } */
 
 .arrow {
   text-align: center;
   margin: 0;
+ 
 }
 .bounce {
   -moz-animation: bounce 2s infinite;
@@ -48,6 +49,8 @@ a { color: white; text-decoration: none; }
 
 .fa-arrow-down {
   font-size: 30px;
+  color: white; 
+  text-decoration: none;
 }
 @keyframes bounce {
   0%, 10%, 30%, 50%, 70% {
