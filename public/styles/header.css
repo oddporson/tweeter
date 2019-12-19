@@ -1,5 +1,5 @@
 header {
-  height: 450px;
+  height: 440px;
   width: 100%;
   color: #ffffff;
   background-color: #0C62A3;
@@ -26,4 +26,18 @@ header {
 h2 {
   color: #FFFFFF;
   font-weight: normal;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1024px) {
+  header {
+    position: absolute;
+    top: 42%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 39%;
+    margin-left: 22px;
+  }
 }
