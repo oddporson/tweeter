@@ -32,4 +32,31 @@ nav {
     padding: 0;
     margin: 0;
   }
-  
+
+/* Arrow pointing down animation taken from codepen*/
+a { color: white; text-decoration: none; }
+
+.arrow {
+  text-align: center;
+  margin: 0;
+}
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+}
+
+.fa-arrow-down {
+  font-size: 30px;
+}
+@keyframes bounce {
+  0%, 10%, 30%, 50%, 70% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(5px);
+  }
+  60% {
+    transform: translateY(10px);
+  }
+}
