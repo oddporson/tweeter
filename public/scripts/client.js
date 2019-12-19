@@ -11,43 +11,7 @@ const escape =  function(str) {
   return div.innerHTML;
 };
 
-$(() => { // --> same as $(document).ready(function(){insert here} - provided by Andy Lindsay
-  // const tweetData = {
-  //   "user": {
-  //     "name": "Newton",
-  //     "avatars": "https://i.imgur.com/73hZDYK.png",
-  //     "handle": "@SirIsaac"
-  //   },
-  //   "content": {
-  //     "text": "What a tweeterific app!"
-  //   },
-  //   "created_at": 1461116232227
-  // };
-
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ];
+$(() => { 
 
   // RENDER TWEET
   const renderTweets = function(tweets) {
@@ -73,41 +37,6 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
     return newTweet;
   };
 
-  // const $tweet = createTweetElement(tweetData);
-  // console.log($tweet); // to see what it looks like
-  // $('#wrapper-tweet').append($tweet); // to add it to the page so we can make sure it's got all the right elements, classes, etc.
-  // renderTweets(data);
-
-
-  // // POSTING TWEET
-  // const $form = $('#tweet-form');
-  // $form.on('submit', function (event) {
-  //   // console.log('Button clicked, performing ajax call...');
-  //   event.preventDefault();
-  //   $.ajax({
-  //     url:'/tweets/',
-  //     method: 'POST',
-  //     data: $form.serialize(),
-  //     success: function(){
-  //       // console.log("everything went well");
-  //       const newTweet = createTweetElement(
-  //         {
-  //           "user": {
-  //             "name": "Porson",
-  //             "avatars": "https://i.imgur.com/73hZDYK.png",
-  //             "handle": "@oddporson" },
-  //           "content": {
-  //             text: $('.message-box').val()
-  //           },
-  //           "created_at": 1461116232227
-  //         }
-  //       )
-  //       $('#wrapper-tweet').prepend(newTweet);
-  //       $(".message-box").val(""); //get rid of text once submitted
-  //       }
-  //     });
-  //   });
-
   // LOAD TWEET / FETCH TWEET
   const loadTweets = function() {
     return $.ajax({
@@ -121,8 +50,6 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
     });
   };
   loadTweets();
-
-
 
   // FORM VALIDATION
   $(".error1").hide();
