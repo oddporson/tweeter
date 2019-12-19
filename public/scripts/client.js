@@ -125,10 +125,14 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
 
 
   // FORM VALIDATION
+  $(".error1").hide();
+  $(".error2").hide();
+
   $('.message-box').on('input', function() {
     const content = $(this).val();
+    event.preventDefault();
     if (content.length > 145) {
-      window.alert('Too long. Plz rspct our arbitary limit of 140 chars. #kthnxbye.');
+      $(".error2").slideDown(200).delay(2000).fadeOut(400);
     }
   });
 
@@ -138,7 +142,7 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
     const data = $(this).serialize();
     const tweetMsgArea = $(this).find('.message-box').val();
     if (tweetMsgArea === "" || tweetMsgArea === null) {
-      window.alert('Are you okay? Type something, you drunkie');
+      $(".error1").slideDown(200).delay(2000).fadeOut(400);
     }
     $.ajax({
       url: '/tweets',
@@ -152,9 +156,9 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
       });
   });
 
-// TOGGLE TWEET FORM
-$('#btn-tweet').click(function(){
-  $('#tweet-form').slideToggle('slow');
-});
+  // TOGGLE TWEET FORM
+  $('#btn-tweet').click(function() {
+    $('#tweet-form').slideToggle('slow');
+  });
 
 }); // ends (document).ready
