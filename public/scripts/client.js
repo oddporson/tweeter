@@ -130,12 +130,12 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
 
   $('.message-box').on('input', function() {
     const content = $(this).val();
-    event.preventDefault();
-    if (content.length > 145) {
-      $(".error2").slideDown(200).delay(2000).fadeOut(400);
+    if (content.length > 140) {
+      $(".error2").slideDown(200);
+    } else {
+      $(".error2").fadeOut();
     }
   });
-
   const $emptyForm = $('#tweet-form');
   $emptyForm.on('submit', function(event) {
     event.preventDefault();
@@ -143,6 +143,10 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
     const tweetMsgArea = $(this).find('.message-box').val();
     if (tweetMsgArea === "" || tweetMsgArea === null) {
       $(".error1").slideDown(200).delay(2000).fadeOut(400);
+      return;
+    } else if (tweetMsgArea.length > 140) {
+      $(".error2").slideDown(200);
+      return;
     }
     $.ajax({
       url: '/tweets',
