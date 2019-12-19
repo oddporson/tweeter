@@ -149,3 +149,27 @@ footer {
   text-align: center;
   color: crimson
 }
+
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1024px) {
+  .new-tweet {
+    position: absolute;
+    width: 50%;
+    top: 21.5%;
+    left: 70%;
+    transform: translate(-50%, -50%)
+  }
+
+  #wrapper-tweet {
+    position: absolute;
+    width: 51%;
+    top: 62%;
+    left: 68.5%;
+    transform: translate(-50%, -50%)
+  }
+  
+}
+
