@@ -1,44 +1,45 @@
 nav {
   position: fixed;
-    height: 120px;
-    width: 100%;
-    background-color: #063356;
-    color: #FFFFFF;
-    padding: 1.5em;
-    display: flex;
-    align-items: center; 
-    justify-content: space-between;
-    z-index: 1;
-  }
-  
-  nav span {
-    font-family: 'Bungee', cursive;
-  }
-  
-  .chevron {
-    text-align: center;
-  }
-  
-  .chevron p {
-    margin: 0;
-    padding: 0;
-  }
-  
-  #btn-tweet {
-    background-color: transparent;
-    cursor:pointer;
-    border-color: transparent;
-    outline: none;
-    padding: 0;
-    margin: 0;
-  }
+  height: 120px;
+  width: 100%;
+  background-color: #063356;
+  color: #FFFFFF;
+  padding: 1.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  top: 0;
+}
+
+nav span {
+  font-family: "Bungee", cursive;
+}
+
+.chevron {
+  text-align: center;
+}
+
+.chevron p {
+  margin: 0;
+  padding: 0;
+}
+
+#btn-tweet {
+  background-color: transparent;
+  cursor: pointer;
+  border-color: transparent;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
 
 /* Arrow pointing down animation taken from codepen*/
 .arrow {
   text-align: center;
   margin: 0;
- 
 }
+
 .bounce {
   -moz-animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
@@ -47,9 +48,10 @@ nav {
 
 .fa-arrow-down {
   font-size: 30px;
-  color: white; 
+  color: white;
   text-decoration: none;
 }
+
 @keyframes bounce {
   0%, 10%, 30%, 50%, 70% {
     transform: translateY(0);
@@ -61,3 +63,5 @@ nav {
     transform: translateY(10px);
   }
 }
+
+/*# sourceMappingURL=nav.css.map */
