@@ -152,10 +152,9 @@ $(() => { // --> same as $(document).ready(function(){insert here} - provided by
       });
   });
 
+// TOGGLE TWEET FORM
+$('#btn-tweet').click(function(){
+  $('#tweet-form').slideToggle('slow');
+});
 
 }); // ends (document).ready
-
-
-
-
-
