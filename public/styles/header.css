@@ -1,9 +1,12 @@
 header {
-  height: 440px;
+  height: 450px;
   width: 100%;
   color: #ffffff;
   background-color: #0C62A3;
   background-image: url("https://www.transparenttextures.com/patterns/black-orchid.png");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile-icon { 
@@ -17,7 +20,6 @@ header {
 }
 
 .name-tag {
-  top: 55%;
   width: 100%;
   text-align: center;
   z-index: 0;
@@ -31,13 +33,22 @@ h2 {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) {
   header {
-    position: absolute;
-    top: 42%;
-    left: 20%;
-    transform: translate(-50%, -50%);
     width: 39%;
     margin-left: 22px;
+    float: left;
+    margin-top: 100px;
   }
-}
+
+  .profile-icon {
+  position: relative;
+  display: block;
+  margin: auto;
+  padding-top: 70px;
+  z-index: 0;
+  top: 5px;
+  text-align: center;
+  }
+
+};

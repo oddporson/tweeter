@@ -154,22 +154,23 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media only screen and (min-width: 1024px) {
-  .new-tweet {
+@media only screen and (min-width: 768px) {
+  .container {
     position: absolute;
     width: 50%;
-    top: 22.5%;
+    float: right;
+    top: 49%;
     left: 70%;
-    transform: translate(-50%, -50%)
+    transform: translate(-50%, -50%);
+    /* margin: 40% ; */
   }
 
-  #wrapper-tweet {
+  /* #wrapper-tweet {
     position: absolute;
     width: 51%;
     top: 62%;
     left: 68.5%;
-    transform: translate(-50%, -50%)
-  }
-  
-}
-
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }*/
+};
