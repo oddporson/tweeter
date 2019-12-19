@@ -138,3 +138,14 @@ footer {
   cursor: pointer;
   transform: scale(1.5);
 }
+
+/* error css */
+
+.error1 p,
+.error2 p {
+  border: 2px dashed crimson;
+  margin: 5px;
+  padding: 1px;
+  text-align: center;
+  color: crimson
+}
