@@ -11,7 +11,7 @@ const escape =  function(str) {
   return div.innerHTML;
 };
 
-$(() => { 
+$(() => {
 
   // RENDER TWEET
   const renderTweets = function(tweets) {
