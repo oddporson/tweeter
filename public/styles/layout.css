@@ -22,5 +22,33 @@ main {
   width: 90vw;
   margin: auto;
   background-color: #F4F1EC;
-  padding: 18px;
+  padding: 25px;
+}
+
+.toggle-btn {
+  position: fixed;
+  left: 89.8%;
+  top: 93%;
+  font-size: 50px;
+}
+
+.toggle-btn:hover {
+  cursor: pointer;
+  color: #FFD51B;
+}
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 768px) {
+  .toggle-btn {
+    position: fixed;
+    left: 96%;
+    top: 95.5%;
+    font-size: 25px;
+  }
+
+  .toggle-btn:hover {
+    cursor: pointer;
+    color: #FFD51B;
+  }
 }
