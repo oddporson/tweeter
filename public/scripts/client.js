@@ -44,7 +44,6 @@ $(() => { // same as $(document).ready(function() {}
       type: "GET",
       success: function(data) {
         $("#wrapper-tweet").empty();
-        console.log(data);
         renderTweets(data);
       }
     });
@@ -54,6 +53,7 @@ $(() => { // same as $(document).ready(function() {}
   // FORM VALIDATION
   $(".error1").hide();
   $(".error2").hide();
+
 
   $('.message-box').on('input', function() {
     const content = $(this).val();
@@ -88,8 +88,28 @@ $(() => { // same as $(document).ready(function() {}
   });
 
   // TOGGLE TWEET FORM
+$('.new-tweet').hide();
+
   $('#btn-tweet').click(function() {
-    $('#tweet-form').slideToggle('slow');
+    $('.new-tweet').toggle(function(){
+      $('.message-box').focus();
+    });
+  });
+
+  
+  // TOGGLE BUTTON SCROLL UP
+  $(".toggle-btn").hide();
+
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 100) {
+      $('.toggle-btn').fadeIn();
+    } else {
+      $('.toggle-btn').fadeOut();
+    }
+  });
+  
+  $('.toggle-btn').click(function() {
+    window.scrollTo(0, 0);
   });
 
 }); // ends (document).ready
