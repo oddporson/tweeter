@@ -25,6 +25,11 @@ nav span {
   padding: 0;
 }
 
+.fa:hover {
+  cursor: pointer;
+  color: #FFD51B;
+}
+
 #btn-tweet {
   background-color: transparent;
   cursor: pointer;
@@ -48,9 +53,10 @@ nav span {
 
 .fa-arrow-down {
   font-size: 30px;
-  color: white;
+  color: #FFFFFF;
   text-decoration: none;
 }
+
 
 @keyframes bounce {
   0%, 10%, 30%, 50%, 70% {
