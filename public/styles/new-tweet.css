@@ -20,7 +20,7 @@
 }
 
 .btn {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   width: 70px;
   height: 30px;
   background: #052C81;
@@ -49,7 +49,6 @@
 }
 
 /* TWEETER POSTS */
-
 #wrapper-tweet {
   position: relative;
   display: block;
@@ -67,11 +66,13 @@
   float: left;
   margin: 5px;
 }
+
 .tweet {
   border: 2px solid #052C81;
   margin-top: 30px;
   margin-bottom: 30px;
-  transition: box-shadow .8s;
+  transition: box-shadow 0.8s;
+  /* overflow: auto; */
 }
 
 .tweet:hover {
@@ -106,7 +107,8 @@ h3 {
   font-size: 18px;
   padding-bottom: 10px;
   padding-right: 15px;
-  padding-left:15px;
+  padding-left: 15px;
+  overflow-x: auto;
 }
 
 footer {
@@ -140,23 +142,21 @@ footer {
 }
 
 /* error css */
-
 .error1,
 .error2 {
   border: 2px dashed crimson;
   margin: 5px;
   padding: 1px;
   text-align: center;
-  color: crimson
+  color: crimson;
 }
 
-
-
 /* MEDIA QUERIES */
-
 @media only screen and (min-width: 768px) {
   .container {
     width: 58%;
     float: right;
   }
-};
+}
+
+/*# sourceMappingURL=new-tweet.css.map */
