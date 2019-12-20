@@ -14,7 +14,6 @@ A simple single-page AJAX-based Twitter clone that uses JQuery, HTML 5 and CSS3 
 - Node 5.10.x or above
 - Body-parser
 - Chance
-- SVG
 
 ## Screenshots
 !["Screenshot of tweets"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-mobile-view.png)
