@@ -25,50 +25,47 @@
   </head>
 
   <body>
-
     <nav>
       <span>tweeter</span>
         <div class="chevron">
           <p><strong>Write</strong> a new tweet</p>          
           <div class="arrow bounce">
             <button id="btn-tweet">
-            <i class="fa fa-arrow-down fa-2x"></i>
-          </button>
+              <i class="fa fa-arrow-down fa-2x"></i>
+            </button>
           </div>
-        
         </div>   
     </nav>
 
     <header>
       <div class= "profile-icon" alt="cartoon version of a person">
-          <img src="/images/profile-hex.png"> 
-          <h2><strong>Porson</strong> Lee</h2>
+        <img src="/images/profile-hex.png"> 
+        <h2><strong>Porson</strong> Lee</h2>
       </div>
-  </header >
+  </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+  <main class="container">
 
-      <!-- error message which is hidden -->
-      <section>
-        <p class="error1"><i class="fas fa-exclamation"></i> This field cannot be empty <i class="fas fa-exclamation"></i> </p>
-        <p class="error2"> <i class="fas fa-exclamation"></i> Maximum 140 characters <i class="fas fa-exclamation"></i> </p>
-      </section>
+    <section>
+      <p class="error1"><i class="fas fa-exclamation"></i> This field cannot be empty <i class="fas fa-exclamation"></i> </p>
+      <p class="error2"> <i class="fas fa-exclamation"></i> Maximum 140 characters <i class="fas fa-exclamation"></i> </p>
+    </section>
 
-      <section class="new-tweet">
-        <form id="tweet-form" method="POST" action="/tweets/">
-          <textarea class="message-box" name="text" placeholder="What are you humming about?"></textarea>
-          <input class="btn" type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
-      </section>
+    <section class="new-tweet">
+      <form id="tweet-form" method="POST" action="/tweets/">
+        <textarea class="message-box" name="text" placeholder="What are you humming about?"></textarea>
+        <input class="btn" type="submit" value="Tweet">
+        <span class="counter">140</span>
+      </form>
+    </section>
 
-      <section id="wrapper-tweet">
+    <section id="wrapper-tweet"></section>
 
-      </section>
   </main>
+  
   <div class="toggle-btn">
     <i class="far fa-arrow-alt-circle-up"></i>
   </div>
+
   </body>
 </html>
