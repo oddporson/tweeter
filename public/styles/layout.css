@@ -3,6 +3,7 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+ 
 html {
   box-sizing: border-box;
 }
@@ -27,7 +28,7 @@ main {
 
 .toggle-btn {
   position: fixed;
-  left: 89.8%;
+  left: 91.8%;
   top: 93%;
   font-size: 50px;
 }
