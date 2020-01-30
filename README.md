@@ -18,8 +18,14 @@ It's built using HTML, CSS, SASS, JavaScript, JQuery, AJAX for the front-end and
 - Chance
 
 ## Screenshots
+
+### Mobile View
 !["Screenshot of mobile view"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-mobile-view.png)
+### Tablet View
 !["Screenshot of tablet view"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-tablet-view.png)
+### Tweeter Message Box
 !["Screenshot of tweeter box"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-box.png)
+### Character Limit
 !["Screenshot of character limit"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-char-limit-error.png)
+### Empty Character Error Message
 !["Screenshot of empty character error"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-empty-char-error.png)
