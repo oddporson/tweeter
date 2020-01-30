@@ -18,8 +18,8 @@ It's built using HTML, CSS, SASS, JavaScript, JQuery, AJAX for the front-end and
 - Chance
 
 ## Screenshots
-!["Screenshot of tweets"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-mobile-view.png)
-!["Screenshot of tweets"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-tablet-view.png)
-!["Screenshot of tweets"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-box.png)
-!["Screenshot of tweets"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-char-limit-error.png)
-!["Screenshot of tweets"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-empty-char-error.png)
+!["Screenshot of mobile view"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-mobile-view.png)
+!["Screenshot of tablet view"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-tablet-view.png)
+!["Screenshot of tweeter box"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-box.png)
+!["Screenshot of character limit"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-char-limit-error.png)
+!["Screenshot of empty character error"](https://github.com/oddporson/tweeter/blob/master/public/docs/tweeter-empty-char-error.png)
